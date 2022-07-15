@@ -15,15 +15,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=VT323&display=swap"
           rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/98ba913511.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="flex-container">
     <nav>
         <ul>
             <li><a href="#flex-container-header">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#flex-container-portfolio">Portfolio</a></li>
-            <li><a href="#flex-container-about">About me</a></li>
+            <li><a href="#contacts">Contact</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About me</a></li>
         </ul>
     </nav>
     <!--Home - first site-->
@@ -33,10 +35,10 @@
         </header>
     </div>
     <!--About me - second site-->
-    <div id="flex-container-about">
+    <section id="about">
         <div class="myself-image">
             <div class="myself-image2">
-                <img src="images/myself.jpg">
+                <img src="images/myself.jpg" alt="Yes, it's me!">
             </div>
         </div>
         <div class="about-me">
@@ -52,39 +54,97 @@
                 </div>
             </article>
         </div>
-    </div>
+    </section>
     <!--Portfolio section - third site-->
-    <div id="flex-container-portfolio">
+    <section id="portfolio">
         <article>
             <div class="portfolio-header">
                 <h2>Portfolio</h2>
-                <p>Here's some of my projects</p>
+                <p>Here are some of my projects</p>
             </div>
             <div class="container-project">
                 <div class="project-item">
-                    <img src="images/projects/project.png">
+                    <img src="images/projects/project.png" alt="Case Converter">
                     <p>Case Converter</p>
+                    <button class="open-window" id="btn-item-1" onclick="showPopupItem1()">Info</button>
                 </div>
                 <div class="project-item">
-                    <img src="images/projects/project.png">
+                    <img src="images/projects/project.png" alt="Simple Chat Bot">
                     <p>Simple Chat Bot</p>
+                    <button class="open-window">Info</button>
                 </div>
                 <div class="project-item">
-                    <img src="images/projects/project.png">
+                    <img src="images/projects/project.png" alt="Simple shop">
                     <p>Simple shop</p>
+                    <button class="open-window">Info</button>
                 </div>
                 <div class="project-item">
-                    <img src="images/projects/project.png">
-                    <p>Simple shop</p>
+                    <img src="images/projects/project.png" alt="Coś tam">
+                    <p>Coś tam</p>
+                    <button class="open-window" id="first-button">More Info</button>
                 </div>
             </div>
         </article>
-    </div>
+        <div id="popup-project-item-1" class="popup-invisible">
+            <h1>Lorem ipsum 1</h1>
+            <p>dolor sit amet, consectetur adipiscing elit.
+                Vestibulum at dapibus elit. In massa lacus, pulvinar et ullamcorper vitae, imperdiet et est.<br>
+                Praesent posuere semper mauris. In tristique volutpat augue, in viverra nisl feugiat eu.<br>
+                Maecenas non est molestie, lobortis magna vitae, lacinia odio.<br>
+                Etiam elementum bibendum condimentum.Donec condimentum lacus in magna rutrum imperdiet.<br>
+                Aliquam nec augue venenatis, consequat ex id.</p>
+            <button class="close-window" onclick="closePopup()">Close</button>
+        </div>
+        <!--<div id="popup-project-item-2" class="popup-invisible">
+            <h1>Lorem ipsum 2</h1>
+            <p>dolor sit amet, consectetur adipiscing elit.
+                Vestibulum at dapibus elit. In massa lacus, pulvinar et ullamcorper vitae, imperdiet et est.
+                Praesent posuere semper mauris. In tristique volutpat augue, in viverra nisl feugiat eu.
+                Maecenas non est molestie, lobortis magna vitae, lacinia odio.
+                Etiam elementum bibendum condimentum.Donec condimentum lacus in magna rutrum imperdiet.
+                Aliquam nec augue venenatis, consequat ex id.</p>
+        </div>
+        <div id="popup-project-item-3" class="popup-invisible">
+            <h1>Lorem ipsum 3</h1>
+            <p>dolor sit amet, consectetur adipiscing elit.
+                Vestibulum at dapibus elit. In massa lacus, pulvinar et ullamcorper vitae, imperdiet et est.
+                Praesent posuere semper mauris. In tristique volutpat augue, in viverra nisl feugiat eu.
+                Maecenas non est molestie, lobortis magna vitae, lacinia odio.
+                Etiam elementum bibendum condimentum.Donec condimentum lacus in magna rutrum imperdiet.
+                Aliquam nec augue venenatis, consequat ex id.</p>
+        </div>
+        <div id="popup-project-item-4" class="popup-invisible">
+            <h1>Lorem ipsum 4</h1>
+            <p>dolor sit amet, consectetur adipiscing elit.
+                Vestibulum at dapibus elit. In massa lacus, pulvinar et ullamcorper vitae, imperdiet et est.
+                Praesent posuere semper mauris. In tristique volutpat augue, in viverra nisl feugiat eu.
+                Maecenas non est molestie, lobortis magna vitae, lacinia odio.
+                Etiam elementum bibendum condimentum.Donec condimentum lacus in magna rutrum imperdiet.
+                Aliquam nec augue venenatis, consequat ex id.</p>
+        </div>-->
+    </section>
     <!--Contact section - fourth section-->
+    <section id="contacts">
+        <div class="contact-background">
+            <div>
+                <h2>Contacts</h2>
+                <br>
+                <p>You can contact me at <a href="mailto: kkuba.iwaszkiewicz@gmail.com">kkuba.iwaszkiewicz@gmail.com</a>
+                    or phone number - {comm: wpisywać tu swój numer czy ktoś po publicznym
+                    repo może sobie wejść i wysłać mój telefon żeby dzwonili z fotowoltaiki xd}</p>
+            </div>
+            <div>
+                <a href="#"><i class="fa-brands fa-github" ></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
     <!--Footer section-->
     <footer>
         <p>Portfolio created by <b>tomaszelby2</b> July 2022</p>
     </footer>
+    <script src="index.js"></script>
 </div>
 </body>
 </html>
